@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/modules/header.js\");\n/* harmony import */ var _modules_closePopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closePopup */ \"./src/modules/closePopup.js\");\n/* harmony import */ var _modules_gift__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/gift */ \"./src/modules/gift.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n\n\n\n\n\n\n(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_closePopup__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_gift__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n//# sourceURL=webpack://fitness-club/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/modules/header.js\");\n/* harmony import */ var _modules_closePopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closePopup */ \"./src/modules/closePopup.js\");\n/* harmony import */ var _modules_gift__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/gift */ \"./src/modules/gift.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n/* harmony import */ var _modules_mainSlider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/mainSlider */ \"./src/modules/mainSlider.js\");\n\n\n\n\n\n\n\n(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_closePopup__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_gift__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_3__.default)();\n(0,_modules_mainSlider__WEBPACK_IMPORTED_MODULE_4__.default)();\n\n//# sourceURL=webpack://fitness-club/./src/index.js?");
 
 /***/ }),
 
@@ -72,6 +72,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar header = function header() {\n  var clubList = document.querySelector('.clubs-list>ul'),\n      headerMain = document.querySelector('.head');\n  headerMain.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.clubs-list>p')) {\n      if (!clubList.hasAttribute('style')) {\n        clubList.setAttribute('style', 'display:block');\n      } else {\n        clubList.removeAttribute('style');\n      }\n    } else if (target == target.closest('.open-popup')) {\n      e.preventDefault();\n      var freeVisitForm = document.querySelector('#free_visit_form');\n      freeVisitForm.style.display = 'block';\n    } else if (target == target.closest('.callback-btn')) {\n      var callBackForm = document.querySelector('#callback_form');\n      callBackForm.style.display = 'block';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);\n\n//# sourceURL=webpack://fitness-club/./src/modules/header.js?");
+
+/***/ }),
+
+/***/ "./src/modules/mainSlider.js":
+/*!***********************************!*\
+  !*** ./src/modules/mainSlider.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar mainSlider = function mainSlider() {\n  var main = document.querySelector('.main-slider'),\n      slides = main.querySelectorAll('.slide');\n  var currentSlide = 0;\n  console.log(slides);\n  setInterval(function () {\n    if (currentSlide == 4) {\n      slides[currentSlide].style.display = 'none';\n      slides[0].removeAttribute('style');\n      currentSlide = 0;\n    } else {\n      slides[currentSlide].style.display = 'none';\n      slides[currentSlide + 1].removeAttribute('style');\n      currentSlide++;\n    }\n  }, 2000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mainSlider);\n\n//# sourceURL=webpack://fitness-club/./src/modules/mainSlider.js?");
 
 /***/ }),
 
@@ -484,7 +495,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("4fbfc6a4333e950c20cd")
+/******/ 		__webpack_require__.h = () => ("7fe80839b14ff8903d95")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
