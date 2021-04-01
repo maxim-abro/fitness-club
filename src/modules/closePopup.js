@@ -8,6 +8,8 @@ const closePopup = () => {
             target.parentNode.removeAttribute('style');
         } else if (target == target.closest('.close_icon')) {
             target.parentNode.parentNode.parentNode.removeAttribute('style');
+        } else if (target == target.closest('.close-btn')) {
+            target.parentNode.parentNode.parentNode.removeAttribute('style');
         }
     });
 }

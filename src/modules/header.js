@@ -1,6 +1,7 @@
 const header = () => {
     const clubList = document.querySelector('.clubs-list>ul'),
-        headerMain = document.querySelector('.header-main');
+        headerMain = document.querySelector('.head');
+
 
 
     headerMain.addEventListener('click', (e) => {
@@ -20,6 +21,7 @@ const header = () => {
             callBackForm.style.display = 'block';
         }
     });
+
 
 };
 

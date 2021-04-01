@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/modules/header.js\");\n/* harmony import */ var _modules_closePopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closePopup */ \"./src/modules/closePopup.js\");\n\n\n\n\n(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_closePopup__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n//# sourceURL=webpack://fitness-club/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ \"./src/modules/header.js\");\n/* harmony import */ var _modules_closePopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/closePopup */ \"./src/modules/closePopup.js\");\n/* harmony import */ var _modules_gift__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/gift */ \"./src/modules/gift.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu */ \"./src/modules/menu.js\");\n\n\n\n\n\n\n(0,_modules_header__WEBPACK_IMPORTED_MODULE_0__.default)();\n(0,_modules_closePopup__WEBPACK_IMPORTED_MODULE_1__.default)();\n(0,_modules_gift__WEBPACK_IMPORTED_MODULE_2__.default)();\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n//# sourceURL=webpack://fitness-club/./src/index.js?");
 
 /***/ }),
 
@@ -49,7 +49,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar closePopup = function closePopup() {\n  var body = document.querySelector('body');\n  body.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.overlay')) {\n      target.parentNode.removeAttribute('style');\n    } else if (target == target.closest('.close_icon')) {\n      target.parentNode.parentNode.parentNode.removeAttribute('style');\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (closePopup);\n\n//# sourceURL=webpack://fitness-club/./src/modules/closePopup.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar closePopup = function closePopup() {\n  var body = document.querySelector('body');\n  body.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.overlay')) {\n      target.parentNode.removeAttribute('style');\n    } else if (target == target.closest('.close_icon')) {\n      target.parentNode.parentNode.parentNode.removeAttribute('style');\n    } else if (target == target.closest('.close-btn')) {\n      target.parentNode.parentNode.parentNode.removeAttribute('style');\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (closePopup);\n\n//# sourceURL=webpack://fitness-club/./src/modules/closePopup.js?");
+
+/***/ }),
+
+/***/ "./src/modules/gift.js":
+/*!*****************************!*\
+  !*** ./src/modules/gift.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar gift = function gift() {\n  var fixedGift = document.querySelector('.fixed-gift>img');\n  fixedGift.addEventListener('click', function () {\n    var gift = document.querySelector('#gift');\n    gift.style.display = 'block';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (gift);\n\n//# sourceURL=webpack://fitness-club/./src/modules/gift.js?");
 
 /***/ }),
 
@@ -60,7 +71,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar header = function header() {\n  var clubList = document.querySelector('.clubs-list>ul'),\n      headerMain = document.querySelector('.header-main');\n  headerMain.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.clubs-list>p')) {\n      if (!clubList.hasAttribute('style')) {\n        clubList.setAttribute('style', 'display:block');\n      } else {\n        clubList.removeAttribute('style');\n      }\n    } else if (target == target.closest('.open-popup')) {\n      e.preventDefault();\n      var freeVisitForm = document.querySelector('#free_visit_form');\n      freeVisitForm.style.display = 'block';\n    } else if (target == target.closest('.callback-btn')) {\n      var callBackForm = document.querySelector('#callback_form');\n      callBackForm.style.display = 'block';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);\n\n//# sourceURL=webpack://fitness-club/./src/modules/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar header = function header() {\n  var clubList = document.querySelector('.clubs-list>ul'),\n      headerMain = document.querySelector('.head');\n  headerMain.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.clubs-list>p')) {\n      if (!clubList.hasAttribute('style')) {\n        clubList.setAttribute('style', 'display:block');\n      } else {\n        clubList.removeAttribute('style');\n      }\n    } else if (target == target.closest('.open-popup')) {\n      e.preventDefault();\n      var freeVisitForm = document.querySelector('#free_visit_form');\n      freeVisitForm.style.display = 'block';\n    } else if (target == target.closest('.callback-btn')) {\n      var callBackForm = document.querySelector('#callback_form');\n      callBackForm.style.display = 'block';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);\n\n//# sourceURL=webpack://fitness-club/./src/modules/header.js?");
+
+/***/ }),
+
+/***/ "./src/modules/menu.js":
+/*!*****************************!*\
+  !*** ./src/modules/menu.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar menu = function menu() {\n  var topMenu = document.querySelector('.top-menu');\n  topMenu.addEventListener('click', function (e) {\n    var target = e.target;\n\n    if (target == target.closest('.scroll>a')) {\n      e.preventDefault();\n      var blockId = target.hash;\n      document.querySelector(blockId).scrollIntoView({\n        behavior: 'smooth',\n        block: 'start'\n      });\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);\n\n//# sourceURL=webpack://fitness-club/./src/modules/menu.js?");
 
 /***/ }),
 
@@ -462,7 +484,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("2b8a43f0eaca390d0478")
+/******/ 		__webpack_require__.h = () => ("4fbfc6a4333e950c20cd")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
