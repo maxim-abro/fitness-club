@@ -13,7 +13,7 @@ const mainSlider = () => {
             slides[currentSlide + 1].removeAttribute('style');
             currentSlide++;
         }
-    }, 2000);
+    }, 4000);
 
 
 }
