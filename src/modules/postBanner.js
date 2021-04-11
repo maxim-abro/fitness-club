@@ -1,4 +1,4 @@
-const validateBanner = () => {
+const postBanner = () => {
     const form = document.querySelector('#banner-form'),
         inputs = form.querySelectorAll('input');
     console.log(inputs);
@@ -68,4 +68,4 @@ const validateBanner = () => {
 };
 
 
-export default validateBanner;
+export default postBanner;

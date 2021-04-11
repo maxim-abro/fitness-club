@@ -6,7 +6,7 @@ import menu from './modules/menu';
 import mainSlider from './modules/mainSlider';
 import carousel from './modules/carousel';
 import gallerySlider from './modules/gallerySlider';
-import validateBanner from './modules/validateBanner';
+import postBanner from './modules/postBanner';
 import calc from './modules/calc';
 
 
@@ -17,5 +17,5 @@ menu();
 mainSlider();
 carousel();
 gallerySlider();
-validateBanner();
+postBanner();
 calc();
