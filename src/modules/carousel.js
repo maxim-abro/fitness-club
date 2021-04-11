@@ -188,8 +188,8 @@ const carousel = () => {
     const carousel = new SliderCarousel({
         main: '.carousel_wrap',
         wrap: '.services-slider',
-        prev: '.arrow-left',
-        next: '.arrow-right',
+        prev: '.slider-left',
+        next: '.slider-right',
         slidesToShow: 5,
         infinity: true,
 

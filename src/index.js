@@ -5,6 +5,7 @@ import gift from './modules/gift';
 import menu from './modules/menu';
 import mainSlider from './modules/mainSlider';
 import carousel from './modules/carousel';
+import gallerySlider from './modules/gallerySlider';
 
 
 header();
@@ -13,3 +14,4 @@ gift();
 menu();
 mainSlider();
 carousel();
+gallerySlider();

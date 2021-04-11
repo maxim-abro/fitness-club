@@ -2,7 +2,6 @@ const mainSlider = () => {
     const main = document.querySelector('.main-slider'),
         slides = main.querySelectorAll('.slide');
     let currentSlide = 0;
-    console.log(slides);
     setInterval(() => {
         if (currentSlide == 4) {
             slides[currentSlide].style.display = 'none';
