@@ -8,6 +8,8 @@ import carousel from './modules/carousel';
 import gallerySlider from './modules/gallerySlider';
 import postBanner from './modules/postBanner';
 import calc from './modules/calc';
+import validate from './modules/validate';
+import footerPost from './modules/footerPost';
 
 
 header();
@@ -19,3 +21,5 @@ carousel();
 gallerySlider();
 postBanner();
 calc();
+validate();
+footerPost();

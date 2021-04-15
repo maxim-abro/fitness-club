@@ -1,6 +1,7 @@
-const postBanner = () => {
-    const form = document.querySelector('#banner-form'),
+const footerPost = () => {
+    const form = document.querySelector('#footer_form'),
         inputs = form.querySelectorAll('input');
+    console.log(inputs);
 
     const statusMessage = document.createElement('div');
 
@@ -12,8 +13,9 @@ const postBanner = () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         form.appendChild(statusMessage);
-        if (inputs[1].value.length < 2) {
-            statusMessage.textContent = 'Имя должно содержать минимум 2 символа';
+        console.dir(inputs[0], inputs[1]);
+        if (inputs[1].checked == false && inputs[0].checked == false) {
+            statusMessage.textContent = 'Выберете один из клубов';
             setTimeout(() => {
                 statusMessage.textContent = '';
             }, 3000);
@@ -33,7 +35,7 @@ const postBanner = () => {
             postData(body)
                 .then((response) => {
                     if (response.status !== 200) {
-                        throw new Error('status network not 200');
+                        throw new Error(`status network ${response.status}`);
                     }
                     const modal = document.querySelector('#thanks');
                     modal.style.display = 'block';
@@ -63,7 +65,7 @@ const postBanner = () => {
             body: JSON.stringify(body)
         });
     }
-};
+}
 
 
-export default postBanner;
+export default footerPost;
