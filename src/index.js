@@ -10,6 +10,8 @@ import postBanner from './modules/postBanner';
 import calc from './modules/calc';
 import validate from './modules/validate';
 import footerPost from './modules/footerPost';
+import toUp from './modules/toUp';
+import burger from './modules/burger';
 
 
 header();
@@ -23,3 +25,5 @@ postBanner();
 calc();
 validate();
 footerPost();
+toUp();
+burger();

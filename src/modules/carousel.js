@@ -190,7 +190,7 @@ const carousel = () => {
         wrap: '.services-slider',
         prev: '.slider-left',
         next: '.slider-right',
-        slidesToShow: 5,
+        slidesToShow: 4,
         infinity: true,
 
         responsive: [{

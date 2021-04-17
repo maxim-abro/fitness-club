@@ -1,7 +1,6 @@
 const footerPost = () => {
     const form = document.querySelector('#footer_form'),
         inputs = form.querySelectorAll('input');
-    console.log(inputs);
 
     const statusMessage = document.createElement('div');
 
@@ -13,7 +12,6 @@ const footerPost = () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         form.appendChild(statusMessage);
-        console.dir(inputs[0], inputs[1]);
         if (inputs[1].checked == false && inputs[0].checked == false) {
             statusMessage.textContent = 'Выберете один из клубов';
             setTimeout(() => {
