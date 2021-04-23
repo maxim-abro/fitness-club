@@ -264,6 +264,30 @@ input[type=button] {
     -ms-interpolation-mode: bicubic
 }
 
+#services {
+    position: relative;
+}
+
+.car-slider-left,
+.car-slider-right {
+    background: #f4c71b;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+}
+
+.car-slider-left {
+    left: 50px;
+    top: 50%;
+}
+
+.car-slider-right {
+    right: 50px;
+    top: 50%;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: "\0020";
