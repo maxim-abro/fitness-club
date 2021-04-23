@@ -279,12 +279,12 @@ input[type=button] {
 }
 
 .car-slider-left {
-    left: 50px;
+    left: 25px;
     top: 50%;
 }
 
 .car-slider-right {
-    right: 50px;
+    right: 25px;
     top: 50%;
 }
 

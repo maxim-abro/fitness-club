@@ -194,11 +194,15 @@ const carousel = () => {
         infinity: true,
 
         responsive: [{
-                breakpoint: 830,
+                breakpoint: 1337,
+                slideToShow: 3,
+            },
+            {
+                breakpoint: 1161,
                 slideToShow: 2,
             },
             {
-                breakpoint: 576,
+                breakpoint: 781,
                 slideToShow: 1,
             }
         ]
